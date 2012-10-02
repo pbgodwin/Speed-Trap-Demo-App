@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="SpeedTrapDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpeedTrapDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="RefreshAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
+            <Setter Property="AutomationProperties.AutomationId" Value="RefreshAppBarButton"/>
+            <Setter Property="AutomationProperties.Name" Value="Refresh"/>
+            <Setter Property="Content" Value="&#xE117;"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid x:Name="layoutRoot"  Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <bm:Map x:ConnectionId='1' Credentials="BING_MAPS_API_KEY_GOES_HERE" x:Name="SpeedTrapMap" MapType="Road" ZoomLevel="12"                     >
+        </bm:Map>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar Background="White">
+            <StackPanel HorizontalAlignment="Right">
+                <Button x:ConnectionId='2' Style="{StaticResource RefreshAppBarButtonStyle}" AutomationProperties.Name="Refresh"                           />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+</Page>
+

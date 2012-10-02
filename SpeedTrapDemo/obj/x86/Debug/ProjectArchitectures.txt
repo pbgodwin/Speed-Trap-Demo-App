@@ -1,0 +1,1 @@
+C:\Dev\SpeedTrapDemo\SpeedTrapDemo\SpeedTrapDemo.csproj;x86
