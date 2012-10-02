@@ -37,7 +37,7 @@ namespace SpeedTrapDemo
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            mobileServiceClient = new MobileServiceClient("https://speedtrapdemo.azure-mobile.net/", "ALuGSlaSNpitDwypdgnLOMEzBMYMRB44");
+            mobileServiceClient = new MobileServiceClient("AZURE_URL_GOES_HERE", "AZURE_API_KEY_GOES_HERE");
         }
 
         /// <summary>
